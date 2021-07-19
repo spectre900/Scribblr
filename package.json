@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0"
+  },
+  "scripts": {
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "start": "node server"
+  },
+  "name": "excalidraw",
+  "description": "Excalidraw app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Pratham Nayak",
+  "license": "ISC"
+}
