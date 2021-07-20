@@ -49,6 +49,8 @@ class ExcalidrawApp extends Component {
 
       axios.post('/api/save', data, config).then(response => {
         console.log(response.data)
+      }).catch((err)=>{
+        console.log(err);
       });
     },
     'image/jpeg',
@@ -59,6 +61,8 @@ class ExcalidrawApp extends Component {
       this.setState({
         images: res.data.images
       });
+    }).catch((err)=>{
+      console.log(err);
     });
 
   }
@@ -80,7 +84,9 @@ class ExcalidrawApp extends Component {
       res.blob().then((blob)=>{
         download(blob, name);
       })
-    })
+    }).catch((err)=>{
+      console.log(err);
+    });
   }
 
   renderItems(name, index){
