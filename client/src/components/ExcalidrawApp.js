@@ -48,7 +48,7 @@ class ExcalidrawApp extends Component {
       };
 
       axios.post('/api/save', data, config).then(response => {
-        console.log(response.data)
+        console.log(response);
       }).catch((err)=>{
         console.log(err);
       });
@@ -58,9 +58,11 @@ class ExcalidrawApp extends Component {
     );
 
     axios.get('/api/show').then((res)=>{
-      this.setState({
-        images: res.data.images
-      });
+      if(res.status===200){
+        this.setState({
+          images: res.data.images
+        });
+      }
     }).catch((err)=>{
       console.log(err);
     });
