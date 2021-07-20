@@ -4,8 +4,6 @@
     "express-formidable": "^1.2.0"
   },
   "scripts": {
-    "install": "cd client && npm install",
-    "build": "cd client && npm run build",
     "start": "node server"
   },
   "name": "excalidraw",

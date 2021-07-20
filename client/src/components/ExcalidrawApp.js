@@ -46,7 +46,7 @@ class ExcalidrawApp extends Component {
         headers: { 'Content-Type': 'multipart/form-data' }
       };
 
-      axios.post('/api/save', data, config).then(response => {
+      axios.post(process.env.REACT_APP_BACKEND_API+'api/save', data, config).then(response => {
         console.log(response);
       }).catch((err)=>{
         console.log(err);
@@ -56,7 +56,7 @@ class ExcalidrawApp extends Component {
     0.5,
     );
 
-    axios.get('/api/show').then((res)=>{
+    axios.get(process.env.REACT_APP_BACKEND_API+'api/show').then((res)=>{
       if(res.status===200){
         this.setState({
           images: res.data.images
@@ -81,7 +81,7 @@ class ExcalidrawApp extends Component {
   }
 
   download(name){
-    fetch('/api/download/'+name).then((res)=>{
+    fetch(process.env.REACT_APP_BACKEND_API+'api/download/'+name).then((res)=>{
       res.blob().then((blob)=>{
         download(blob, name);
       })

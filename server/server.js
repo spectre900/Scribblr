@@ -4,9 +4,16 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-app.use(express.static('client/build'));
 
 app.use(formidable());
+
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
 
 app.post('/api/save', (req, res) => {
   const imagePath = req.files.img.path;
@@ -39,7 +46,7 @@ app.get('/api/download/:image', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  res.send('This is the API for Excalidraw');
 });
 
 const port = process.env.PORT || 5000;
