@@ -155,6 +155,7 @@ class ExcalidrawApp extends Component {
                 viewModeEnabled={this.state.viewMode}
                 zenModeEnabled={this.state.zenMode}
                 gridModeEnabled={this.state.gridMode}
+                UIOptions={{ canvasActions:  {export: false} }}
               />
             </div>
             </Col>
