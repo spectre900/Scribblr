@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "cd server && npm start"
+    "start": "cd server && npm install && npm start"
   },
   "name": "excalidraw",
   "description": "Excalidraw app",
