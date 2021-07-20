@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "cd server && npm start"
+  },
+  "name": "excalidraw",
+  "description": "Excalidraw app",
+  "version": "1.0.0",
+  "author": "Pratham Nayak"
+}
