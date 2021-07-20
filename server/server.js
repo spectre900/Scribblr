@@ -15,6 +15,8 @@ app.use(function (req, res, next) {
   next();
 });
 
+
+//API to save images locally
 app.post('/api/save', (req, res) => {
   const imagePath = req.files.img.path;
   const imageName = req.files.img.name;
@@ -25,6 +27,8 @@ app.post('/api/save', (req, res) => {
   res.sendStatus(200);
 });
 
+
+// API to send a list of all images stored
 app.get('/api/show', (req, res) => {
   if (fs.existsSync('./images')){
     fs.readdir('./images', (err, files) => {
@@ -36,6 +40,8 @@ app.get('/api/show', (req, res) => {
   }
 });
 
+
+// API to download the image given the image name
 app.get('/api/download/:image', (req, res) => {
   if(fs.existsSync('./images/'+req.params.image)){
     res.sendFile(path.resolve(__dirname, 'images', req.params.image));
@@ -46,7 +52,11 @@ app.get('/api/download/:image', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  res.send('This is the API for Excalidraw');
+  var instructions = 'This is the API for Excalidraw <br/><br/>';
+  instructions+= '/api/show - Get the list of stored images <br/><br/>';
+  instructions+= '/api/download/image.jpeg - Download the image given the image name <br/><br/>';
+  instructions+= '/api/save - Upload a new image to the server in JPEG format <br/><br/>';
+  res.send(instructions);
 });
 
 const port = process.env.PORT || 5000;
