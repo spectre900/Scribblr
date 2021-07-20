@@ -166,9 +166,9 @@ class ExcalidrawApp extends Component {
               <h1 className={styles.title}>
                 Saved Images
               </h1>
-              <ListGroup>
+              {/* <ListGroup>
                 {this.state.images.map(this.renderItems)}
-              </ListGroup>
+              </ListGroup> */}
             </div>
           </Col>
         </Row>
