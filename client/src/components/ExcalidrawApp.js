@@ -17,6 +17,7 @@ class ExcalidrawApp extends Component {
       zenMode: false,
       viewMode: false,
       gridMode: true,
+      changes: false,
       latestState: [],
       latestElement: [],
     }
@@ -46,11 +47,14 @@ class ExcalidrawApp extends Component {
         headers: { 'Content-Type': 'multipart/form-data' }
       };
 
-      axios.post(process.env.REACT_APP_BACKEND_API+'api/save', data, config).then(response => {
-        console.log(response);
-      }).catch((err)=>{
-        console.log(err);
-      });
+      if(this.state.changes){
+        axios.post(process.env.REACT_APP_BACKEND_API+'api/save', data, config).then(response => {
+          console.log(response);
+        }).catch((err)=>{
+          console.log(err);
+        });
+      }
+      
     },
     'image/jpeg',
     0.5,
@@ -78,6 +82,11 @@ class ExcalidrawApp extends Component {
       latestElement: element,
       latestState: state
     });
+    if(element.length>0){
+      this.setState({
+        changes: true,
+      })
+    }
   }
 
   download(name){
