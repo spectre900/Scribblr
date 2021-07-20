@@ -1,0 +1,88 @@
+.holder {
+  padding: 3vw;
+  background-color: lightblue;
+}
+
+.header{
+  font-size: 4vw
+}
+
+.modes{
+  display: flex;
+  align-items: center;
+}
+
+.reset_button{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.labels{
+  margin: 10px;
+}
+
+.check{
+  margin: 5px;
+}
+
+.drawboard {
+  height: 80vh;
+  margin-top: 10px;
+  border-style: solid;
+}
+
+.list{
+  height: 100%;
+  padding: 1.2vw;
+  text-align: center;
+  border-style: solid;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+.title{
+  font-size: 2vw;
+}
+
+.download{
+  float: right;
+  width: 1.2vw;
+  height: 1.2vw;
+  border-style: none;
+  background-size: cover;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-image: url('./icons/download.png');
+}
+
+@media screen and (max-width: 1199px) {
+  .holder {
+    padding: 20px;
+  }
+  
+  .header{
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  .labels{
+    margin: 5px;
+  }
+  
+  .list{
+    padding: 10px;
+    height: 400px;
+    margin-top: 10px;
+  }
+  
+  .title{
+    font-size: 25px;
+  }
+  
+  .download{
+    width: 20px;
+    height: 20px;
+  }
+}
