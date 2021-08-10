@@ -1,6 +1,6 @@
 # Scribblr
 
-## Downloads images from Excalidraw automatically and uploads to a server at a regular interval
+## A virtual whiteboard with functionality to auto sync and download as PDFs.
 
 Frontend React app deployed at [http://excalidraw-eta.vercel.app/](http://excalidraw-eta.vercel.app/)
 
