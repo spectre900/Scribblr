@@ -1,4 +1,4 @@
-# Virtual Whiteboard
+# Scribblr
 
 ## Downloads images from Excalidraw automatically and uploads to a server at a regular interval
 
