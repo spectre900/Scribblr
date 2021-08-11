@@ -116,7 +116,7 @@ class ExcalidrawApp extends Component {
           <Row>
             <Col xl={6}>
               <h1 className={styles.header}>
-                Excalidraw
+                Scribblr
               </h1>
             </Col>
             <Col xl={6} className={styles.modes}>

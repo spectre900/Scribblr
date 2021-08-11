@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server"
   },
-  "name": "excalidraw",
-  "description": "Excalidraw app",
+  "name": "scribblr",
+  "description": "A virtual whiteboard with functionality to auto sync and download as PDFs.",
   "version": "1.0.0",
   "main": "server.js",
   "author": "Pratham Nayak",

@@ -52,7 +52,7 @@ app.get('/api/download/:image', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  var instructions = 'This is the API for Excalidraw <br/><br/>';
+  var instructions = 'This is the API for Scribblr <br/><br/>';
   instructions+= '/api/show - Get the list of stored images <br/><br/>';
   instructions+= '/api/download/image.jpeg - Download the image given the image name <br/><br/>';
   instructions+= '/api/save - Upload a new image to the server in JPEG format <br/><br/>';
