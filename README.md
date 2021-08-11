@@ -1,6 +1,6 @@
 # Scribblr
 
-## A virtual whiteboard with functionality to auto sync and download as PDFs.
+## A virtual whiteboard with functionality to auto sync and save as an image.
 
 Frontend React app deployed at [http://scribblr-eight.vercel.app/](http://scribblr-eight.vercel.app/)
 
