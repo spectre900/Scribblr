@@ -4,4 +4,4 @@
 
 Frontend React app deployed at [http://scribblr-eight.vercel.app/](http://scribblr-eight.vercel.app/)
 
-Backend Node server deployed at [https://excalidraw-server.herokuapp.com/](https://excalidraw-server.herokuapp.com/)
+Backend Node server deployed at [https://scribblr-server.herokuapp.com/](https://scribblr-server.herokuapp.com/)
